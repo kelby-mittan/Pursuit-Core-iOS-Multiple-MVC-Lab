@@ -19,7 +19,6 @@ class AnimalCell: UITableViewCell {
         
     }
     
-    
     func configureCell(for animal: ZooAnimal) {
         animalImage.image = UIImage(named: animal.imageNumber.description)
         animalLabel?.text = animal.name
