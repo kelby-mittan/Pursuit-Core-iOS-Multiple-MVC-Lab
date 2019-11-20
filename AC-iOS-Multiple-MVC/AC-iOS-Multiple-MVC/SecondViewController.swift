@@ -44,16 +44,24 @@ extension SecondViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-        guard let cell = tableViewTwo.dequeueReusableCell(withIdentifier: "zooAnimalCell", for: indexPath) as? AnimalCell else {
-            fatalError()
-        }
-        
         let animal = zooAnimals[indexPath.section][indexPath.row]
         
-        cell.configureCell(for: animal)
+        if indexPath.section % 2 == 0 {
+            guard let cell = tableViewTwo.dequeueReusableCell(withIdentifier: "zooAnimalCell", for: indexPath) as? AnimalCell else {
+                fatalError()
+            }
+            cell.configureCell(for: animal)
+            
+            return cell
+        } else {
+            guard let cell = tableViewTwo.dequeueReusableCell(withIdentifier: "zooAnimalCellTwo", for: indexPath) as? AnimalCell else {
+                fatalError()
+            }
+            cell.configureCell(for: animal)
+            
+            return cell
+        }
         
-        return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

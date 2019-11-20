@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Zoo Animals-->
+        <!--Custom Cell-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Zoo Animals" id="Epd-sf-GdZ"/>
+                    <navigationItem key="navigationItem" title="Custom Cell" id="Epd-sf-GdZ"/>
                     <connections>
                         <outlet property="tableViewOne" destination="bHJ-bb-YKB" id="qFV-94-vNu"/>
                     </connections>
@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="1048" y="116"/>
         </scene>
-        <!--Zoo Animals-->
+        <!--Custom w/ Sections-->
         <scene sceneID="qjM-sc-zQb">
             <objects>
                 <viewController id="IcG-aX-XMv" customClass="SecondViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,6 +145,52 @@
                                             <segue destination="xZo-F1-3hL" kind="show" id="SbG-gD-SRt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="zooAnimalCellTwo" rowHeight="146" id="MjC-tD-tIn" customClass="AnimalCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MjC-tD-tIn" id="Ofj-4f-76R">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g3z-uT-9n0">
+                                                    <rect key="frame" x="264" y="28" width="130" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="BQp-dh-HSD"/>
+                                                        <constraint firstAttribute="height" constant="90" id="cfL-ZJ-DsW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dn3-sz-QS2">
+                                                    <rect key="frame" x="28" y="64" width="228" height="18"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDl-EA-b9e">
+                                                    <rect key="frame" x="28" y="17" width="228" height="39"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SDl-EA-b9e" firstAttribute="leading" secondItem="Ofj-4f-76R" secondAttribute="leadingMargin" constant="8" id="8kc-oH-iol"/>
+                                                <constraint firstItem="Dn3-sz-QS2" firstAttribute="top" secondItem="SDl-EA-b9e" secondAttribute="bottom" constant="8" id="CzJ-3f-ClB"/>
+                                                <constraint firstItem="g3z-uT-9n0" firstAttribute="centerY" secondItem="Ofj-4f-76R" secondAttribute="centerY" id="ECQ-Gi-Lnm"/>
+                                                <constraint firstItem="g3z-uT-9n0" firstAttribute="leading" secondItem="SDl-EA-b9e" secondAttribute="trailing" constant="8" id="ElB-BJ-mVx"/>
+                                                <constraint firstItem="g3z-uT-9n0" firstAttribute="trailing" secondItem="Ofj-4f-76R" secondAttribute="trailingMargin" id="Nyl-1b-pKz"/>
+                                                <constraint firstItem="Dn3-sz-QS2" firstAttribute="leading" secondItem="Ofj-4f-76R" secondAttribute="leadingMargin" constant="8" id="ZXQ-m5-aVL"/>
+                                                <constraint firstItem="SDl-EA-b9e" firstAttribute="top" secondItem="Ofj-4f-76R" secondAttribute="topMargin" constant="6" id="h18-yB-eyL"/>
+                                                <constraint firstItem="Dn3-sz-QS2" firstAttribute="centerY" secondItem="g3z-uT-9n0" secondAttribute="centerY" id="qF7-ta-Jqk"/>
+                                                <constraint firstItem="g3z-uT-9n0" firstAttribute="leading" secondItem="Dn3-sz-QS2" secondAttribute="trailing" constant="8" id="taf-4b-I6H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImage" destination="g3z-uT-9n0" id="LF5-p5-OSf"/>
+                                            <outlet property="animalLabel" destination="SDl-EA-b9e" id="DJx-Lz-FAt"/>
+                                            <outlet property="fromLabel" destination="Dn3-sz-QS2" id="DDt-bk-DEn"/>
+                                            <segue destination="xZo-F1-3hL" kind="show" id="nh2-gV-XaM"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -157,7 +203,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="33y-Vz-Ufd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Zoo Animals" id="4fm-qk-bwG"/>
+                    <navigationItem key="navigationItem" title="Custom w/ Sections" id="4fm-qk-bwG"/>
                     <connections>
                         <outlet property="tableViewTwo" destination="pUJ-rK-oSu" id="NZw-lM-9sD"/>
                     </connections>
@@ -217,9 +263,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zT5-1r-IoP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2217" y="116"/>
+            <point key="canvasLocation" x="2255" y="116"/>
         </scene>
-        <!--Zoo Animals-->
+        <!--Built in Cell-->
         <scene sceneID="GlB-9v-KfA">
             <objects>
                 <viewController id="WU1-BD-3KY" customClass="FirstViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -270,9 +316,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PRT-mB-tkJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Zoo Animals" id="7XO-85-4K0"/>
+                    <navigationItem key="navigationItem" title="Built in Cell" id="7XO-85-4K0"/>
                     <connections>
-                        <outlet property="firstTableView" destination="cfc-oV-JaK" id="KAM-WS-AJh"/>
+                        <outlet property="firstTableView" destination="cfc-oV-JaK" id="O9E-9X-ANZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISC-Go-nLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -283,7 +329,7 @@
         <scene sceneID="nKI-2N-tlc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fyv-57-DOs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Custom" image="1.circle" catalog="system" id="bmS-gq-Vtw"/>
+                    <tabBarItem key="tabBarItem" title="Custom" id="bmS-gq-Vtw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tNX-kB-DM0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -302,7 +348,7 @@
         <scene sceneID="CJd-Sv-dsY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZD6-dB-tLP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sections" image="2.circle" catalog="system" id="BRz-Wm-Vbt"/>
+                    <tabBarItem key="tabBarItem" title="Sections" id="BRz-Wm-Vbt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="swD-md-7Gt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -341,7 +387,7 @@
         <scene sceneID="2p8-BY-aEE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jud-ec-zcr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Built In" image="3.circle" catalog="system" id="cq3-nK-uBf"/>
+                    <tabBarItem key="tabBarItem" title="Built In" id="cq3-nK-uBf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FXj-9o-52P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -357,12 +403,7 @@
             <point key="canvasLocation" x="138" y="-613"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="1.circle" catalog="system" width="64" height="60"/>
-        <image name="2.circle" catalog="system" width="64" height="60"/>
-        <image name="3.circle" catalog="system" width="64" height="60"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tcj-bY-rSa"/>
+        <segue reference="SbG-gD-SRt"/>
     </inferredMetricsTieBreakers>
 </document>

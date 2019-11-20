@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     
     func updateUI() {
         guard let theAnimal = animal else {
-            fatalError()
+            fatalError("Couldn't set animal object")
         }
         animalImage.image = UIImage(named: theAnimal.imageNumber.description)
         animalLabel.text = theAnimal.name
