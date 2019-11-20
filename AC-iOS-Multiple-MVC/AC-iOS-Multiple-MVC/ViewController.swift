@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         
         animals = ZooAnimal.zooAnimals
         tableViewOne.dataSource = self
+        tableViewOne.delegate = self
         
     }
     
@@ -64,6 +65,16 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
     
+    
+}
+
+// change height of a cell
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
     
 }
 
